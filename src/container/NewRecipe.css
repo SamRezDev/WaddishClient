@@ -1,0 +1,22 @@
+.NewRecipeContainer {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 5rem;
+}
+
+.NewRecipeContainer > input {
+	text-align: center;
+	font-size: 3rem;
+	margin-top: 10px;
+}
+.NewRecipeContainer > button {
+	color: white;
+	background-color: grey;
+	margin-top: 4rem;
+	font-size: 3rem;
+	border: none;
+}
+.NewRecipeContainer > button:active {
+	box-shadow: blue;
+}

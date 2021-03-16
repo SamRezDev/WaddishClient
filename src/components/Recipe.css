@@ -1,0 +1,14 @@
+.RecipeLine {
+	display: grid;
+	grid-template-columns: 40% 20% 20% 15%;
+
+	background-color: rgb(17, 141, 93);
+	color: white;
+	border-bottom: 1px solid white;
+	text-align: center;
+}
+.Delete {
+	margin-left: 50%;
+	height: 20px;
+	width: 50%;
+}

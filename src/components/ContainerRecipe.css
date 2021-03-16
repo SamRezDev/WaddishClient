@@ -1,0 +1,75 @@
+.TitleRecipe {
+	font-size: 4rem;
+}
+.Description {
+	font-size: 1.5rem;
+	text-align: center;
+}
+.ReCheck {
+	font-size: 2rem;
+	height: 100px;
+	background-color: orange;
+	width: 100%;
+	color: white;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.ReCheck:hover {
+	animation: ripple 2s linear infinite;
+}
+.ReCheck:active {
+	animation: ripple 0.5s linear infinite;
+}
+@keyframes ripple {
+	0% {
+		box-shadow: 0 0 0 0rem rgba($ripple-color, 0.2), 0 0 0 1rem rgba($ripple-color, 0.2),
+			0 0 0 2rem rgba($ripple-color, 0.2), 0 0 0 5rem rgba($ripple-color, 0.2);
+	}
+	100% {
+		box-shadow: 0 0 0 1rem rgba($ripple-color, 0.2), 0 0 0 2rem rgba($ripple-color, 0.2),
+			0 0 0 5rem rgba($ripple-color, 0.2), 0 0 0 8rem rgba($ripple-color, 0);
+	}
+}
+.Forget {
+	margin-top: 50px;
+	color: white;
+	background-color: blue;
+	font-size: 2rem;
+	height: 50px;
+	cursor: pointer;
+	width: 100%;
+}
+.Forget:active {
+	transform: scale(1.01);
+}
+.ContainerRecipe {
+	border: 5px solid black;
+	display: flex;
+	justify-content: center;
+	width: 400px;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px;
+}
+
+.ForgetDays {
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ForgetDays > button {
+	font-size: 1.5rem;
+	width: 33%;
+	height: 40px;
+
+	border: 0.1px solid white;
+	background-color: black;
+}
+.ForgetDays > button:active {
+	outline: none;
+}
+.ForgetCont {
+	display: grid;
+}

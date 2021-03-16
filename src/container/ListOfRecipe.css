@@ -1,0 +1,15 @@
+.TableOfRecipe {
+	display: grid;
+
+	font-size: 1.1rem;
+}
+.HeaderRecipe {
+	display: grid;
+	grid-template-columns: 40% 20% 20% 15%;
+
+	background-color: rgb(240, 240, 240);
+	color: rgb(22, 20, 20);
+	border-bottom: 1px solid white;
+	text-align: center;
+	padding-bottom: 0px;
+}

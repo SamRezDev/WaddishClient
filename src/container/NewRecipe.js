@@ -19,7 +19,7 @@ const UserID = props.id;
             UserID:  UserID
         }
 
-    axios.post("http://localhost:5000/Recipe/add", Recipe)
+    axios.post("https://waddish-back.herokuapp.com/Recipe/add", Recipe)
     .then(res => console.log(res.data)).catch(error => console.log(error))
 
     }

@@ -7,7 +7,7 @@ export default function ListOfRecipe(props) {
     const UserID = props.id
 
     useEffect(() => {
-        axios.get("http://localhost:5000/Recipe/"+UserID)
+        axios.get("https://waddish-back.herokuapp.com/Recipe/"+UserID)
         .then(response => {
             setRecipeList(response.data)
           
@@ -20,7 +20,7 @@ export default function ListOfRecipe(props) {
 
     function DeleteElement(id){
 
-        axios.delete("http://localhost:5000/Recipe/"+id)
+        axios.delete("https://waddish-back.herokuapp.com/Recipe/"+id)
         .then(response => {console.log(response.data)
         })
         console.log("function delete called")

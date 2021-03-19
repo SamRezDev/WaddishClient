@@ -10,7 +10,7 @@ export default function ContainerRecipe(props) {
     const [FreshDisplay, setFreshDisplay] = useState(false)
 const UserID = props.id
     useEffect(() => {
-        axios.get("http://localhost:5000/Recipe/"+UserID)
+        axios.get("https://waddish-back.herokuapp.com/Recipe/"+UserID)
         .then(response => {
             setRecipe(response.data)
           
@@ -104,7 +104,7 @@ const RecipeUpdated ={
     ForgetUntilDate : d
 
 }
-    axios.post("http://localhost:5000/Recipe/update/"+randomDish._id, RecipeUpdated)
+    axios.post("https://waddish-back.herokuapp.com/Recipe/update/"+randomDish._id, RecipeUpdated)
     .then(res => console.log(res.data)).catch(error => console.log(error))
 
     }

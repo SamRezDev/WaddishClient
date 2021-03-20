@@ -20,10 +20,12 @@ const UserID = props.id;
         }
 
     axios.post("https://waddish-back.herokuapp.com/Recipe/add/"+UserID, Recipe)
-    .then(setTimeout(() =>  {
-        setRecipeAdded(true)
-    },2000)  ).catch(error => console.log(error))
-    setRecipeAdded(false)
+    .then(
+       function() {setRecipeAdded(true)
+        setTimeout(() =>  {
+            setRecipeAdded(false)
+    },3000) } ).catch(error => console.log(error))
+   
     }
 
     
@@ -33,7 +35,7 @@ const UserID = props.id;
   <input type="text" placeholder="Title" className="RecipeTitle" onChange={(e)=>setTitle(e.target.value)}/>
  <textarea type="text"  placeholder="Description" className="RecipeDescription" onChange={(e)=>setDescription(e.target.value)}/> 
         <button type="submit" >OK</button>
-        {RecipeAdded? <h1 >RECIPE ADDED!</h1> : ""}
+        {RecipeAdded? <h1 style={{"alignText":"center"}} >RECIPE ADDED!</h1> : ""}
             </form>
         </div>
     )

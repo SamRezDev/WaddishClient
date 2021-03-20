@@ -5,6 +5,7 @@ import { Route, Switch,NavLink } from "react-router-dom";
 import NewRecipe from "./container/NewRecipe.js"
 import ListOfRecipe from "./container/ListOfRecipe.js"
 import Login from "./container/Login.js"
+import About from "./container/About.js"
 import ContainerRecipe from "./components/ContainerRecipe"
 import NavBar from "./components/NavBar"
 import {useState} from "react"
@@ -72,6 +73,9 @@ function SignOff(){
   <Switch>
  <Route  path={["/Login"]} >
  <Login/>
+ </Route>
+ <Route  path={["/About"]} >
+ <About/>
  </Route>
  <Route exact path={["/Home","/"]} default >
  <ContainerRecipe id={idUser}/>

@@ -42,7 +42,13 @@ export default function NavBar(props) {
           </NavLink>
         </li>
     
-      
+        <li>
+          {" "}
+          <NavLink  onClick={() =>  setActiveNav("ABOUT")}  
+           style={(ActiveNav==="ABOUT")?{"color":"#ff005c"}:{ "color":"black" } } to="/About">
+          <a >ABOUT WADDISH </a>
+          </NavLink>
+        </li>
       </ul>
     </div>
   );

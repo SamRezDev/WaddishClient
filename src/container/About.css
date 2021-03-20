@@ -1,0 +1,17 @@
+.About {
+	font-size: 3rem;
+	padding: 40px;
+	text-decoration: none;
+}
+
+.About > ul {
+	padding: 20px;
+	list-style: none;
+}
+.About > ul > li {
+	margin: 20px;
+}
+.About > ul > li:last-child {
+	font-size: 2rem;
+	margin: 50px;
+}

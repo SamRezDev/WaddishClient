@@ -5,6 +5,7 @@
 }
 body {
 	font-size: 62.5%;
+	background-color: rgb(227, 231, 230);
 }
 .App {
 	display: flex;

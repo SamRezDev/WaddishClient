@@ -9,15 +9,15 @@ import "./NavBar.css";
 </NavLink> 
 </li> */
 export default function NavBar(props) {
-  const [ActiveNav, setActiveNav] = useState("")
+  const [ActiveNav, setActiveNav] = useState("HOME")
   return (
     <div className="NavBar">
       <div className="Title">
       <NavLink onClick={() =>  setActiveNav("HOME") } 
-      style={(ActiveNav==="HOME")?{ "color":"white" }: {"color":"#ff005c"}}
+      style={(ActiveNav==="HOME")?{"color":"#ff005c"}:{ "color":"black" } }
       to="/Home">
           {" "}
-          <h2> HOME </h2>{" "}
+          <a> HOME </a>{" "}
         </NavLink>{" "}
   
      
@@ -29,16 +29,16 @@ export default function NavBar(props) {
         <li>
           {" "}
           <NavLink  onClick={() =>  setActiveNav("NEW")}  
-           style={(ActiveNav==="NEW")?{ "color":"white" }: {"color":"#ff005c"}} to="/New">
-          <h2 >ADD  RECIPE </h2>
+           style={(ActiveNav==="NEW")?{"color":"#ff005c"}:{ "color":"black" } } to="/New">
+          <a >ADD  RECIPE </a>
           </NavLink>
         </li>
 
         <li>
           {" "}
           <NavLink  onClick={() =>  setActiveNav("ALLRECIPE")}  
-          style={(ActiveNav==="ALLRECIPE")?{ "color":"white" }: {"color":"#ff005c"}} to="/List">
-          <h2 > CHECK RECIPE LIST </h2>
+          style={(ActiveNav==="ALLRECIPE")?{"color":"#ff005c"}:{ "color":"black" } } to="/List">
+          <a > CHECK RECIPE LIST </a>
           </NavLink>
         </li>
     

@@ -29,7 +29,7 @@ const UserID = props.id;
         <div>
             <form className="NewRecipeContainer" onSubmit={AddRecipe}>
   <input type="text" placeholder="Title" className="RecipeTitle" onChange={(e)=>setTitle(e.target.value)}/>
- <input type="text"  placeholder="Description" className="RecipeDescription" onChange={(e)=>setDescription(e.target.value)}/> 
+ <textarea type="text"  placeholder="Description" className="RecipeDescription" onChange={(e)=>setDescription(e.target.value)}/> 
         <button type="submit" >OK</button>
             </form>
         </div>

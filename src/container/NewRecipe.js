@@ -4,7 +4,7 @@ import "./NewRecipe.css"
 export default function NewRecipe(props) {
 const [Title, setTitle] = useState()
 const [Description, setDescription] = useState()
-
+const [RecipeAdded, setRecipeAdded] = useState(false)
 const UserID = props.id;
 
     function AddRecipe(e){
@@ -19,9 +19,11 @@ const UserID = props.id;
             UserID:  UserID
         }
 
-    axios.post("https://waddish-back.herokuapp.com/Recipe/add", Recipe)
-    .then(res => console.log(res.data)).catch(error => console.log(error))
-
+    axios.post("https://waddish-back.herokuapp.com/Recipe/add/"+UserID, Recipe)
+    .then(setTimeout(() =>  {
+        setRecipeAdded(true)
+    },2000)  ).catch(error => console.log(error))
+    setRecipeAdded(false)
     }
 
     
@@ -31,6 +33,7 @@ const UserID = props.id;
   <input type="text" placeholder="Title" className="RecipeTitle" onChange={(e)=>setTitle(e.target.value)}/>
  <textarea type="text"  placeholder="Description" className="RecipeDescription" onChange={(e)=>setDescription(e.target.value)}/> 
         <button type="submit" >OK</button>
+        {RecipeAdded? <h1 >RECIPE ADDED!</h1> : ""}
             </form>
         </div>
     )

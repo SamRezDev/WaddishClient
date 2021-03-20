@@ -93,7 +93,7 @@ function SignOff(){
   : <div className="LoginSection">
      
     <div className="OrClass">  Welcome to WADDISH!<br/>
-     Please login here :) </div> 
+     LOGIN BELOW  </div> 
     <button className="SignInButton" onClick={signInWithGoogle}>  LOGIN WITH GOOGLE</button>
         
  </div>  }

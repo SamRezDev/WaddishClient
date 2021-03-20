@@ -20,16 +20,6 @@
 .ReCheck:active {
 	animation: ripple 0.5s linear infinite;
 }
-@keyframes ripple {
-	0% {
-		box-shadow: 0 0 0 0rem rgba($ripple-color, 0.2), 0 0 0 1rem rgba($ripple-color, 0.2),
-			0 0 0 2rem rgba($ripple-color, 0.2), 0 0 0 5rem rgba($ripple-color, 0.2);
-	}
-	100% {
-		box-shadow: 0 0 0 1rem rgba($ripple-color, 0.2), 0 0 0 2rem rgba($ripple-color, 0.2),
-			0 0 0 5rem rgba($ripple-color, 0.2), 0 0 0 8rem rgba($ripple-color, 0);
-	}
-}
 .Forget {
 	margin-top: 50px;
 	color: white;

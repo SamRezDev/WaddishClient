@@ -3,8 +3,7 @@ import React from 'react';
 export default function Login() {
 	function LoginUser(e) {
 		e.preventDefault();
-		console.log(e.target.email.value);
-		console.log(e.target.password.value);
+
 	}
 	return (
 		<div className="LoginPage">

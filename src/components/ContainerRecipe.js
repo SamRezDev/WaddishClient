@@ -8,7 +8,7 @@ export default function ContainerRecipe(props) {
 	const [ ForgottenDays, setForgottenDays ] = useState(1);
 	const [ Fresh, setFresh ] = useState(true);
 	const [ FreshDisplay, setFreshDisplay ] = useState(false);
-	const [ refreshRec, setrefreshRec ] = useState(false);
+
 	const UserID = props.id;
 	useEffect(
 		() => {
@@ -18,7 +18,7 @@ export default function ContainerRecipe(props) {
 					setRecipe(response.data);
 				})
 				.catch((error) => {
-					console.log(error);
+					
 				});
 		},
 		[ Recipe ]
@@ -28,10 +28,8 @@ export default function ContainerRecipe(props) {
 		() => {
 			let CurrentDate = new Date(Date.now());
 			if (compareTime(randomDish.ForgetUntilDate, CurrentDate)) {
-				console.log('Try something else');
 				setFresh(false);
 			} else {
-				console.log('Quite fresh');
 				setFresh(true);
 			}
 		},
@@ -80,33 +78,30 @@ export default function ContainerRecipe(props) {
 				setrandomValue(value);
 
 				setrandomDish(Recipe[randomValue]);
-				console.log(Recipe[randomValue]);
-				console.log(randomDish.ForgetUntilDate);
+			
 
 				/* Recipe.filter(dish => dish.ForgetUntilDate < CurrentDate  ) */
-				console.log(randomDish.Title);
+			
 				let today = new Date('02-09-2021');
 			} else {
-				console.log('Recipe not loaded');
+			
 			}
 		}
 	};
 
 	const forgetDish = (e) => {
-		console.log(randomDish.ForgetUntilDate);
 		let d = new Date(randomDish.ForgetUntilDate);
 		let current = new Date();
-		console.log('BASEDATE IS ' + d);
+
 		d.setDate(current.getDate() + ForgottenDays);
-		console.log(randomDish);
-		console.log('NEW DATE IS ' + d);
+
 		const RecipeUpdated = {
 			ForgetUntilDate: d
 		};
 		axios
 			.post('https://waddish-back.herokuapp.com/Recipe/update/' + randomDish._id, RecipeUpdated)
 			.then(setRecipe(Recipe))
-			.catch((error) => console.log(error));
+			.catch();
 	};
 
 	return (

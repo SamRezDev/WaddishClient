@@ -12,7 +12,7 @@ export default function ListOfRecipe(props) {
             setRecipeList(response.data)
           
         }).catch((error)=>{
-            console.log(error)
+           
         })
        
     }, [RecipeList])
@@ -21,9 +21,9 @@ export default function ListOfRecipe(props) {
     function DeleteElement(id){
 
         axios.delete("https://waddish-back.herokuapp.com/Recipe/"+id)
-        .then(response => {console.log(response.data)
+        .then(response => {
         })
-        console.log("function delete called")
+      
             }
 
     return (

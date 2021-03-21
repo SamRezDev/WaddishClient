@@ -26,6 +26,7 @@ body {
 .SignOffButton:hover {
 	background-color: red;
 	color: white;
+	cursor: pointer;
 }
 .SignInButton {
 	margin-top: 5%;

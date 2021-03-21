@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Route, Switch,NavLink } from "react-router-dom";
+import { Route, Switch,NavLink, Link,useHistory } from "react-router-dom";
 
 import NewRecipe from "./container/NewRecipe.js"
 import ListOfRecipe from "./container/ListOfRecipe.js"
@@ -42,18 +42,18 @@ function App() {
 
   const [idUser, setidUser] = useState("")
 
-  
+  const history = useHistory();
 
  const signInWithGoogle = () => {
     
     auth.signInWithPopup(provider).then(function(result) {
-      console.log("useris"+JSON.stringify(auth))
+     
       setidUser(auth.currentUser.uid)
-      console.log("IDUSER IS"+idUser)
+  
     }).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
-      console.log(errorCode);
+     
     
     
       var errorMessage = error.message;
@@ -64,6 +64,8 @@ function App() {
   }
 function SignOff(){
   auth.signOut()
+  setidUser()
+  history.push("/About")
 }
 
   return (
@@ -90,15 +92,18 @@ function SignOff(){
 
  </Switch>
  <div className="AccountSection">
- <div className="LoggedInAs"> Logged in as : <br/> {auth.currentUser.displayName} <img src={auth.currentUser.photoURL} alt=""/></div>
- <button className="SignOffButton" onClick={()=> auth.signOut()}>  SIGN OFF </button>
+ <div className="LoggedInAs"> Logged in as : <br/>
+     {auth.currentUser.displayName} <img src={auth.currentUser.photoURL} alt=""/></div>
+ <button className="SignOffButton" onClick={()=> SignOff()}>  SIGN OFF </button>
+
  </div>
    </>
   : <div className="LoginSection">
      
     <div className="OrClass">  Welcome to WADDISH!<br/>
     Start by signing in through google </div> 
-    
+  
+
     <button className="SignInButton" onClick={signInWithGoogle}>  LOGIN WITH GOOGLE</button>
     <About/>  
  </div>  }

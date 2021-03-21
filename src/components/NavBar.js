@@ -17,7 +17,7 @@ export default function NavBar(props) {
       style={(ActiveNav==="HOME")?{"color":"#ff005c"}:{ "color":"black" } }
       to="/Home">
           {" "}
-          <a> HOME </a>{" "}
+          HOME {" "}
         </NavLink>{" "}
   
      
@@ -30,7 +30,7 @@ export default function NavBar(props) {
           {" "}
           <NavLink  onClick={() =>  setActiveNav("NEW")}  
            style={(ActiveNav==="NEW")?{"color":"#ff005c"}:{ "color":"black" } } to="/New">
-          <a >ADD  RECIPE </a>
+         ADD  RECIPE
           </NavLink>
         </li>
 
@@ -38,15 +38,16 @@ export default function NavBar(props) {
           {" "}
           <NavLink  onClick={() =>  setActiveNav("ALLRECIPE")}  
           style={(ActiveNav==="ALLRECIPE")?{"color":"#ff005c"}:{ "color":"black" } } to="/List">
-          <a > CHECK RECIPE LIST </a>
+          CHECK RECIPE LIST 
           </NavLink>
+          
         </li>
     
         <li>
           {" "}
           <NavLink  onClick={() =>  setActiveNav("ABOUT")}  
            style={(ActiveNav==="ABOUT")?{"color":"#ff005c"}:{ "color":"black" } } to="/About">
-          <a >ABOUT WADDISH </a>
+          ABOUT WADDISH 
           </NavLink>
         </li>
       </ul>

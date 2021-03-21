@@ -16,6 +16,7 @@ export default function ContainerRecipe(props) {
 				.get('https://waddish-back.herokuapp.com/Recipe/' + UserID)
 				.then((response) => {
 					setRecipe(response.data);
+				
 				})
 				.catch((error) => {
 					
@@ -36,32 +37,7 @@ export default function ContainerRecipe(props) {
 		[ Fresh, randomDish.ForgetUntilDate ]
 	);
 
-	/*
-    const Recipe =[
-        {
-            
-            name: "Riz",
-            description :"Classic riz",
-            DateAdded : "",
-            ForgetUntil : "",
-
-        },
-        {
-            
-            name: "3dess",
-            description :"3dess is cool",
-            DateAdded : "",
-            ForgetUntil : "",
-        },
-        {
-            
-            name: "loubia",
-            description :"loubia is fine ",
-            DateAdded : "",
-            ForgetUntil : "",
-        },
-    ]
-*/
+	
 
 	function compareTime(time1, time2) {
 		return new Date(time1) >= new Date(time2); // true if time1 is later
@@ -80,7 +56,7 @@ export default function ContainerRecipe(props) {
 				setrandomDish(Recipe[randomValue]);
 			
 
-				/* Recipe.filter(dish => dish.ForgetUntilDate < CurrentDate  ) */
+			
 			
 				let today = new Date('02-09-2021');
 			} else {
@@ -104,6 +80,17 @@ export default function ContainerRecipe(props) {
 			.catch();
 	};
 
+	function countProperties (obj) {
+		var count = 0;
+	
+		for (var property in obj) {
+			if (Object.prototype.hasOwnProperty.call(obj, property)) {
+				count++;
+			}
+		}
+	
+		return count;
+	}
 	return (
 		<div style={{ marginTop: '50px' }}>
 			{
@@ -121,13 +108,19 @@ export default function ContainerRecipe(props) {
 					<div className="Description">{randomDish.Description}</div>
 					<div className="Waddishornot" style={FreshDisplay ? { display: 'block' } : { display: 'none' }}>
 						{' '}
-						{Fresh ? ' GO AHEAD' : 'you should try something else m8'}{' '}
+						{Fresh ? ' GO AHEAD' : 'you should try something else'}{' '}
 					</div>
 				</div>
 			}
-			<button className="ReCheck" onClick={newDish}>
+			
+		{countProperties(Recipe) >1 ? <button className="ReCheck" onClick={newDish} >
 				WADDISH ?
 			</button>
+			
+			
+			: <button className="ReCheckRecipe"  >
+				ADD A DISH FIRST 
+			</button>	}
 			<div className="ForgetCont">
 				<button className="Forget" onClick={forgetDish}>
 					Forget about this for..

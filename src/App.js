@@ -68,7 +68,7 @@ function SignOff(){
 
   return (
     <div className="App">
-      {user? <> 
+      {idUser? <> 
   <NavBar />
   <Switch>
  <Route  path={["/Login"]} >
@@ -97,9 +97,10 @@ function SignOff(){
   : <div className="LoginSection">
      
     <div className="OrClass">  Welcome to WADDISH!<br/>
-     LOGIN BELOW  </div> 
+    Start by signing in through google </div> 
+    
     <button className="SignInButton" onClick={signInWithGoogle}>  LOGIN WITH GOOGLE</button>
-        
+    <About/>  
  </div>  }
 
     </div>

@@ -9,7 +9,7 @@ export default function About() {
 				<li> CHECK THE HOMEPAGE </li>
 				<li> CLICK TO GENERATE A RANDOM RECIPE FROM YOUR LIST </li>
 				<li> GET RECOMMENDED A FRESH RECIPE </li>
-				<li> You can choose to "forget" a suggested recipe </li>
+				<li> You can choose to "forget" a suggested recipe for a set amount of days </li>
 			</ul>
 		</div>
 	);

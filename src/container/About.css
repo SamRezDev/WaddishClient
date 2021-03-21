@@ -2,6 +2,7 @@
 	font-size: 3rem;
 	padding: 40px;
 	text-decoration: none;
+	border-top: 2px solid black;
 }
 
 .About > ul {

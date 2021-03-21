@@ -28,6 +28,18 @@ body {
 	color: white;
 }
 .SignInButton {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	font-size: 2rem;
+	color: rgb(226, 226, 226);
+	background-color: rgb(45, 160, 122);
+	border-radius: 5px;
+	width: 400px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	transition: 0.2s;
 }
 .SignInButton:hover {
@@ -41,7 +53,7 @@ body {
 	flex-direction: column;
 }
 .OrClass {
-	font-size: 5rem;
+	font-size: 4rem;
 	cursor: default;
 }
 .AccountSection {

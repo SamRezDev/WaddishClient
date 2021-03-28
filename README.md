@@ -1,5 +1,5 @@
 # WaddishClient
-An app that helps you find your freshest recipes 
+A MERN app that helps you find your freshest recipes  
 
 
 
